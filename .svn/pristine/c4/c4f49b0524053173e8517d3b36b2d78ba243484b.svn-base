@@ -1,0 +1,9 @@
+url=jdbc:oracle:thin:@localhost:1521:orcl
+driverClass=oracle.jdbc.OracleDriver
+username=scott
+password=tiger
+
+url2=jdbc\:mysql\://localhost\:3306/test
+driverClass2=com.mysql.jdbc.Driver
+username2=root
+password2=5257

@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+<%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>   
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- core标签库 -->
+<!-- 1、定义变量 变量存储在四大作用域 page，request，session，application
+	标签的属性 value一般都支持el表达式计算
+ -->
+<c:set var="name" value="后羿" scope="page"></c:set>
+<c:set var="result" value="${1+1 }" scope="page"></c:set>
+${pageScope.name }<br/>
+${pageScope.result }
+
+<!-- 2、if语句不支持else -->
+<c:set var="sal" value="2000"></c:set>
+<c:if test="${pageScope.sal<=10000 }">底薪</c:if>
+<c:if test="${pageScope.sal>10000 }">高薪</c:if>
+<!-- 3、choose when otherwise-->
+<c:choose>
+	<c:when test="${pageScope.sal<=10000 }">底薪</c:when>
+	<c:when test="${10000<pageScope.sal and pageScope.sal<20000 }">中薪</c:when>
+	<c:otherwise>高薪</c:otherwise>
+</c:choose>
+<!-- 4、循环 for each -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

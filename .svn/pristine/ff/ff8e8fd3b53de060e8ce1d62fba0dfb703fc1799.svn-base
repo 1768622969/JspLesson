@@ -1,0 +1,8 @@
+package cn.et.query;
+
+public class myuserQuery {
+	public String getTable(){
+		return null;
+		
+	}
+}
